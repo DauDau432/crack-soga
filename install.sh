@@ -150,7 +150,6 @@ install_soga() {
     chmod +x /usr/bin/soga
     clear
     echo ""
-    echo ""
     echo "  Cách sử dụng tập lệnh quản lý soga:"
     echo "--------------------[Đậu Đậu việt hóa]--------------------" 
     echo "  soga              - Hiển thị menu quản lý (nhiều chức năng hơn)"
