@@ -42,13 +42,11 @@ Cấm_bit_torrent = true # Đặt thành true để tắt tải xuống torrent
 default_dns = 8.8.8.8,1.1.1.1 # Định cấu hình dns mặc định, nơi bạn có thể định cấu hình dns để mở khóa phương tiện truyền trực tuyến, được phân tách bằng dấu phẩy
 ```
 # Hướng dẫn crack
-tại ô `soga_key = # Khóa ủy quyền`
+Tại dòng `soga_key = # Khóa ủy quyền`
 - nếu các bạn muốn dùng bản cộng đồng thì k cần điền vào ô này, nó sẽ như bản gốc và giới hạn 88 người dùng
 - nếu các bạn muốn sử dụng bản thương mại, không giới hạn giới dùng thì điền kí tự bất kì vào rồi khởi động lại `soga`
 
 # Tài liệu
-[V2board bảng điều khiển v2ray hướng dẫn gắn nút phụ trợ phương pháp cấu hình tập lệnh soga](https://ivpsr.com/235.html)
-
-[Cài đặt phụ trợ SOGA](https://v2rayn.net/19.html)
-
-[Cách bẻ khóa chương trình phụ trợ soga](https://www.rman.top/2021/02/07/crack-soga/)
+- [V2board bảng điều khiển v2ray hướng dẫn gắn nút phụ trợ phương pháp cấu hình tập lệnh soga](https://ivpsr.com/235.html)
+- [Cài đặt phụ trợ SOGA](https://v2rayn.net/19.html)
+- [Cách bẻ khóa chương trình phụ trợ soga](https://www.rman.top/2021/02/07/crack-soga/)
