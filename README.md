@@ -1,4 +1,21 @@
 # Crack-Soga full việt hóa
+Phiên bản crack của chương trình phụ trợ soga v2ray
+
+> Phiên bản crack có thể có nhiều rủi ro không xác định khác nhau. Vui lòng sử dụng nó sau khi nhận định của riêng bạn. Tôi không chịu trách nhiệm về các hậu quả khác nhau của việc sử dụng phần mềm này.
+ 
+ Chỉ hack cho vui thôi, dự án này sẽ vĩnh viễn ngừng cập nhật, mong các bạn ủng hộ bản chính chủ, hãy chú ý theo dõi XrayR trong thời gian tới
+ 
+[XrayR là một khung công tác back-end dựa trên Xray mã nguồn mở và miễn phí, hỗ trợ các giao thức V2ay, Trojan, Shadowsocks, cực kỳ dễ mở rộng và hỗ trợ kết nối nhiều bảng điều khiển](https://github.com/XrayR-project/XrayR)
+
+Phiên bản này là phiên bản crack bẩn, các bạn tự học cách sử dụng, mong các bạn ủng hộ phiên bản gốc
+
+[soga backend là một chương trình phụ trợ hỗ trợ v2ray, Trojan, Shadowsocks cùng lúc, phiên bản cộng đồng hỗ trợ tối đa 88 người dùng và tối ưu hóa việc sử dụng bộ nhớ lâu dài.](https://github.com/sprov065/soga)
+
+# ~~ Crack địa chỉ tải xuống tệp nhị phân: [release](https://github.com/RManLuo/crack-soga-v2ray/releases)~~
+
+## LÀM THẾ NÀO ĐỂ CRACK
+
+[Cách bẻ khóa chương trình phụ trợ soga](https://www.rman.top/2021/02/07/crack-soga/)
 
 # Cài đặt 
 ```
@@ -41,12 +58,18 @@ Cấm_bit_torrent = true # Đặt thành true để tắt tải xuống torrent
 
 default_dns = 8.8.8.8,1.1.1.1 # Định cấu hình dns mặc định, nơi bạn có thể định cấu hình dns để mở khóa phương tiện truyền trực tuyến, được phân tách bằng dấu phẩy
 ```
-# Hướng dẫn crack
-Tại dòng `soga_key = # Khóa ủy quyền`
-- nếu các bạn muốn dùng bản cộng đồng thì k cần điền vào ô này, nó sẽ như bản gốc và giới hạn 88 người dùng
-- nếu các bạn muốn sử dụng bản thương mại, không giới hạn giới dùng thì điền kí tự bất kì vào rồi khởi động lại `soga`
+# Hướng dẫn bẻ khóa
+
+- phiên bản cộng đồng sẽ giới hạn 88 người dùng
+- phiên bản thương mại, không giới hạn giới dùng
+## Các vấn đề đã biết
+
+Phiên bản này không phải là một bản crack hoàn chỉnh và sẽ có quá trình khởi động lại trong chu kỳ từ nửa giờ đến 1 ngày. Vui lòng xem xét cẩn thận tác động của sự cố này.
+
+## cho phép bẻ khóa
+
+Để kích hoạt phiên bản crack, bạn chỉ cần nhập một ký tự bất kỳ tại dòng `soga_key = # Khóa ủy quyền`, nếu để trống thì đó là phiên bản cộng đồng gốc.
 
 # Tài liệu
 - [V2board bảng điều khiển v2ray hướng dẫn gắn nút phụ trợ phương pháp cấu hình tập lệnh soga](https://ivpsr.com/235.html)
 - [Cài đặt phụ trợ SOGA](https://v2rayn.net/19.html)
-- [Cách bẻ khóa chương trình phụ trợ soga](https://www.rman.top/2021/02/07/crack-soga/)
