@@ -146,7 +146,7 @@ install_soga() {
     if [[ ! -f /etc/soga/dns.yml ]]; then
         cp dns.yml /etc/soga/
     fi
-    curl -o /usr/bin/soga -Ls https://raw.githubusercontent.com/enxier/crack-soga/master/soga.sh
+    curl -o /usr/bin/soga -Ls https://raw.githubusercontent.com/DauDau432/-crack-soga/main/soga.sh
     chmod +x /usr/bin/soga
     echo -e ""
     echo "soga 管理脚本使用方法: daudau"
