@@ -365,8 +365,6 @@ show_usage() {
 show_menu() {
 clear
     echo -e " 
-    echo ""
-    echo ""
     kịch bản quản lý phụ trợ soga，không hoạt động với docker
 ${green}-------[Đậu Đậu việt hóa]-------${plain}
     0.${plain} tập lệnh thoát
