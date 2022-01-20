@@ -11,17 +11,17 @@ Phiên bản này là phiên bản crack bẩn, các bạn tự học cách sử
 
 [soga backend là một chương trình phụ trợ hỗ trợ v2ray, Trojan, Shadowsocks cùng lúc, phiên bản cộng đồng hỗ trợ tối đa 88 người dùng và tối ưu hóa việc sử dụng bộ nhớ lâu dài.](https://github.com/sprov065/soga)
 
-# ~~ Crack địa chỉ tải xuống tệp nhị phân: [release](https://github.com/RManLuo/crack-soga-v2ray/releases)~~
+# Crack địa chỉ tải xuống tệp nhị phân: [release](https://github.com/RManLuo/crack-soga-v2ray/releases)
 
 ## LÀM THẾ NÀO ĐỂ CRACK
 
 [Cách bẻ khóa chương trình phụ trợ soga](https://www.rman.top/2021/02/07/crack-soga/)
 
-# Cài đặt 
+## Cài đặt 
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/DauDau432/crack-soga/main/install.sh)
 ```
-# Cấu hình soga
+## Cấu hình soga
 ```   
 vi /etc/soga/soga.conf
 ```
