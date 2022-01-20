@@ -61,7 +61,7 @@ default_dns = 8.8.8.8,1.1.1.1 # Định cấu hình dns mặc định, nơi bạ
 # Hướng dẫn bẻ khóa
 
 - phiên bản cộng đồng sẽ giới hạn 88 người dùng
-- phiên bản thương mại, không giới hạn giới dùng
+- phiên bản thương mại, không giới hạn người dùng
 ## Các vấn đề đã biết
 
 Phiên bản này không phải là một bản crack hoàn chỉnh và sẽ có quá trình khởi động lại trong chu kỳ từ nửa giờ đến 1 ngày. Vui lòng xem xét cẩn thận tác động của sự cố này.
