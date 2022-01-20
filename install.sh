@@ -150,7 +150,7 @@ install_soga() {
     chmod +x /usr/bin/soga
     echo -e ""
     echo "  Cách sử dụng tập lệnh quản lý soga:"
-    echo "--------------------${red}[Đậu Đậu việt hóa]{plain}--------------------" 
+    echo "-------------------- ${red}[Đậu Đậu việt hóa]${plain} --------------------" 
     echo "  soga              - Hiển thị menu quản lý (nhiều chức năng hơn)"
     echo "  soga start        - bắt đầu soga"
     echo "  soga stop         - dừng soga"
