@@ -48,5 +48,7 @@ tại ô `soga_key = # Khóa ủy quyền`
 
 # Tài liệu
 [V2board bảng điều khiển v2ray hướng dẫn gắn nút phụ trợ phương pháp cấu hình tập lệnh soga](https://ivpsr.com/235.html)
+
 [Cài đặt phụ trợ SOGA](https://v2rayn.net/19.html)
+
 [Cách bẻ khóa chương trình phụ trợ soga](https://www.rman.top/2021/02/07/crack-soga/)
