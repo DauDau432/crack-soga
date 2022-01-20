@@ -343,6 +343,7 @@ show_soga_version() {
 }
 
 show_usage() {
+    echo ""
     echo "  Cách sử dụng tập lệnh quản lý soga:"
     echo "--------------------[Đậu Đậu việt hóa]--------------------" 
     echo "  soga              - Hiển thị menu quản lý (nhiều chức năng hơn)"
