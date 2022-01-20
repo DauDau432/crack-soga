@@ -148,9 +148,11 @@ install_soga() {
     fi
     curl -o /usr/bin/soga -Ls https://raw.githubusercontent.com/DauDau432/crack-soga/main/soga.sh
     chmod +x /usr/bin/soga
-    echo -e ""
+    clear
+    echo ""
+    echo ""
     echo "  Cách sử dụng tập lệnh quản lý soga:"
-    echo "-------------------- ${red}[Đậu Đậu việt hóa]${plain} --------------------" 
+    echo "--------------------[Đậu Đậu việt hóa]--------------------" 
     echo "  soga              - Hiển thị menu quản lý (nhiều chức năng hơn)"
     echo "  soga start        - bắt đầu soga"
     echo "  soga stop         - dừng soga"
