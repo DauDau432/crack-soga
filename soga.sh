@@ -84,7 +84,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/DauDau432/-crack-soga/main/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/DauDau432/crack-soga/main/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -108,7 +108,7 @@ update() {
 #        fi
 #        return 0
 #    fi
-    bash <(curl -Ls https://raw.githubusercontent.com/DauDau432/-crack-soga/main/install.sh) $version
+    bash <(curl -Ls https://raw.githubusercontent.com/DauDau432/crack-soga/main/install.sh) $version
     if [[ $? == 0 ]]; then
         echo -e "${green}更新完成，已自动重启 soga，请使用 soga status 查看启动情况${plain}"
         exit
@@ -248,7 +248,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/soga -N --no-check-certificate https://raw.githubusercontent.com/DauDau432/-crack-soga/main/soga.sh
+    wget -O /usr/bin/soga -N --no-check-certificate https://raw.githubusercontent.com/DauDau432/crack-soga/main/soga.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}下载脚本失败，请检查本机能否连接 Github${plain}"
