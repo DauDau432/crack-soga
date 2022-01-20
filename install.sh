@@ -7,10 +7,10 @@ plain='\033[0m'
 
 cur_dir=$(pwd)
 
-# check root
-[[ $EUID -ne 0 ]] && echo -e "${red}错误：${plain} 必须使用root用户运行此脚本！\n" && exit 1
+# kiểm tra gốc
+[[ $EUID -ne 0 ]] && echo -e "  lỗi：Tập lệnh này phải được chạy với tư cách người dùng gốc！\n" && exit 1
 
-# check os
+# kiểm tra hệ điều hành
 if [[ -f /etc/redhat-release ]]; then
     release="centos"
 elif cat /etc/issue | grep -Eqi "debian"; then
@@ -26,11 +26,11 @@ elif cat /proc/version | grep -Eqi "ubuntu"; then
 elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
     release="centos"
 else
-    echo -e "${red}未检测到系统版本，请联系脚本作者！${plain}\n" && exit 1
+    echo -e "  Phiên bản hệ thống không được phát hiện, vui lòng liên hệ với tác giả kịch bản！${plain}\n" && exit 1
 fi
 
 if [ "$(getconf WORD_BIT)" != '32' ] && [ "$(getconf LONG_BIT)" != '64' ] ; then
-    echo "本软件不支持 32 位系统(x86)，请使用 64 位系统(x86_64)，如果检测有误，请联系作者"
+    echo "  Phần mềm này không hỗ trợ hệ thống 32-bit (x86), vui lòng sử dụng hệ thống 64-bit (x86_64), nếu phát hiện sai, vui lòng liên hệ với tác giả"
     exit 2
 fi
 
@@ -46,15 +46,15 @@ fi
 
 if [[ x"${release}" == x"centos" ]]; then
     if [[ ${os_version} -le 6 ]]; then
-        echo -e "${red}请使用 CentOS 7 或更高版本的系统！${plain}\n" && exit 1
+        echo -e "  Vui lòng sử dụng CentOS 7 trở lên！${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"ubuntu" ]]; then
     if [[ ${os_version} -lt 16 ]]; then
-        echo -e "${red}请使用 Ubuntu 16 或更高版本的系统！${plain}\n" && exit 1
+        echo -e "  Vui lòng sử dụng Ubuntu 16 trở lên！${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"debian" ]]; then
     if [[ ${os_version} -lt 8 ]]; then
-        echo -e "${red}请使用 Debian 8 或更高版本的系统！${plain}\n" && exit 1
+        echo -e "  Vui lòng sử dụng Debian 8 trở lên！${plain}\n" && exit 1
     fi
 fi
 
@@ -67,7 +67,7 @@ install_base() {
     fi
 }
 
-# 0: running, 1: not running, 2: not installed
+# 0: đang chạy, 1: không chạy, 2: chưa cài đặt
 check_status() {
     if [[ ! -f /etc/systemd/system/soga.service ]]; then
         return 2
@@ -93,22 +93,22 @@ install_soga() {
     if  [ $# == 0 ] ;then
         last_version=$(curl -Ls "https://api.github.com/repos/enxier/crack-soga/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
-            echo -e "${red}检测 soga 版本失败，可能是超出 Github API 限制，请稍后再试，或手动指定 soga 版本安装${plain}"
+            echo -e "  Không phát hiện được phiên bản soga, có thể đã vượt quá giới hạn API Github, vui lòng thử lại sau hoặc chỉ định phiên bản soga để cài đặt theo cách thủ công${plain}"
             exit 1
         fi
-        echo -e "检测到 soga 最新版本：${last_version}，开始安装"
+        echo -e "  soga phiên bản mới nhất được phát hiện：${last_version}，bắt đầu cài đặt"
         wget -N --no-check-certificate -O /usr/local/soga.tar.gz https://github.com/enxier/crack-soga/releases/download/${last_version}/soga-cracked-linux64.tar.gz
         if [[ $? -ne 0 ]]; then
-            echo -e "${red}下载 soga 失败，请确保你的服务器能够下载 Github 的文件${plain}"
+            echo -e "  Không thể tải xuống soga, vui lòng đảm bảo máy chủ của bạn có thể tải xuống tệp Github${plain}"
             exit 1
         fi
     else
         last_version=$1
         url="https://github.com/enxier/crack-soga/releases/download/${last_version}/soga-cracked-linux64.tar.gz"
-        echo -e "开始安装 soga v$1"
+        echo -e "  bắt đầu cài đặt soga v$1"
         wget -N --no-check-certificate -O /usr/local/soga.tar.gz ${url}
         if [[ $? -ne 0 ]]; then
-            echo -e "${red}下载 soga v$1 失败，请确保此版本存在${plain}"
+            echo -e "  Không tải xuống được soga v$1, hãy đảm bảo rằng phiên bản này tồn tại${plain}"
             exit 1
         fi
     fi
@@ -123,20 +123,20 @@ install_soga() {
     systemctl daemon-reload
     systemctl stop soga
     systemctl enable soga
-    echo -e "${green}soga v${last_version}${plain} 安装完成，已设置开机自启"
+    echo -e "  soga v${last_version}${plain} Quá trình cài đặt hoàn tất, nó đã được thiết lập để bắt đầu tự động"
     if [[ ! -f /etc/soga/soga.conf ]]; then
         cp soga.conf /etc/soga/
         echo -e ""
-        echo -e "全新安装，请先参看 wiki 教程：https://github.com/sprov065/soga/wiki，配置必要的内容"
+        echo -e "  Để cài đặt mới, vui lòng tham khảo hướng dẫn wiki trước: https://github.com/sprov065/soga/wiki, cấu hình nội dung cần thiết"
     else
         systemctl start soga
         sleep 2
         check_status
         echo -e ""
         if [[ $? == 0 ]]; then
-            echo -e "${green}soga 重启成功${plain}"
+            echo -e "  soga khởi động lại thành công${plain}"
         else
-            echo -e "${red}soga 可能启动失败，请稍后使用 soga log 查看日志信息，若无法启动，则可能更改了配置格式，请前往 wiki 查看：https://github.com/RManLuo/crack-soga-v2ray/wiki${plain}"
+            echo -e "  soga có thể không khởi động được, vui lòng sử dụng soga log để kiểm tra thông tin nhật ký sau này, nếu không khởi động được, định dạng cấu hình có thể đã bị thay đổi${plain}"
         fi
     fi
 
@@ -149,25 +149,25 @@ install_soga() {
     curl -o /usr/bin/soga -Ls https://raw.githubusercontent.com/DauDau432/crack-soga/main/soga.sh
     chmod +x /usr/bin/soga
     echo -e ""
-    echo "soga 管理脚本使用方法: daudau"
-    echo "------------------------------------------"
-    echo "soga              - 显示管理菜单 (功能更多)"
-    echo "soga start        - 启动 soga"
-    echo "soga stop         - 停止 soga"
-    echo "soga restart      - 重启 soga"
-    echo "soga status       - 查看 soga 状态"
-    echo "soga enable       - 设置 soga 开机自启"
-    echo "soga disable      - 取消 soga 开机自启"
-    echo "soga log          - 查看 soga 日志"
-    echo "soga update       - 更新 soga"
-    echo "soga update x.x.x - 更新 soga 指定版本"
-    echo "soga install      - 安装 soga"
-    echo "soga uninstall    - 卸载 soga"
-    echo "soga version      - 查看 soga 版本"
-    echo "------------------------------------------"
+    echo "  Cách sử dụng tập lệnh quản lý soga:"
+    echo "--------------------${red}[Đậu Đậu việt hóa]{plain}--------------------" 
+    echo "  soga              - Hiển thị menu quản lý (nhiều chức năng hơn)"
+    echo "  soga start        - bắt đầu soga"
+    echo "  soga stop         - dừng soga"
+    echo "  soga restart      - khởi động lại soga"
+    echo "  soga status       - Kiểm tra trạng thái soga"
+    echo "  soga enable       - Đặt soga để bắt đầu tự động "
+    echo "  soga disable      - Hủy tự động bắt đầu soga "
+    echo "  soga log          - Xem nhật ký soga "
+    echo "  soga update       - cập nhật soga "
+    echo "  soga update x.x.x - cập nhật phiên bản chỉ định soga "
+    echo "  soga install      - cài đặt soga "
+    echo "  soga uninstall    - gỡ cài đặt soga "
+    echo "  soga version      - Kiểm tra phiên bản soga "
+    echo "----------------------------------------------------------"   
 }
 
-echo -e "${green}开始安装${plain}"
+echo -e "  bắt đầu cài đặt${plain}"
 install_base
 install_acme
 install_soga $1
