@@ -73,3 +73,6 @@ Phiên bản này không phải là một bản crack hoàn chỉnh và sẽ có
 # Tài liệu
 - [V2board bảng điều khiển v2ray hướng dẫn gắn nút phụ trợ phương pháp cấu hình tập lệnh soga](https://ivpsr.com/235.html)
 - [Cài đặt phụ trợ SOGA](https://v2rayn.net/19.html)
+
+# Video hướng dẫn
+[Tại đây](https://youtu.be/3mNSUUpBiMY)
