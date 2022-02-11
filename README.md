@@ -1,4 +1,4 @@
-# Crack-Soga full việt hóa
+# Crack-Soga version 2.0.6 full việt hóa
 Phiên bản crack của chương trình phụ trợ soga v2ray
 
 > Phiên bản crack có thể có nhiều rủi ro không xác định khác nhau. Vui lòng sử dụng nó sau khi nhận định của riêng bạn. Tôi không chịu trách nhiệm về các hậu quả khác nhau của việc sử dụng phần mềm này.
