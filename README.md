@@ -21,18 +21,18 @@ Phiên bản này là phiên bản crack bẩn, các bạn tự học cách sử
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/DauDau432/crack-soga/main/install.sh)
 ```
-##thời gian đồng bộ
+## thời gian đồng bộ
 
 Nút v2ray cần được đồng bộ hóa thời gian. Nếu thời gian quá khác với thời gian của máy khách, kết nối sẽ không thể thực hiện được.
 
-CentOS 
+- CentOS 
 ```
 yum install -y ntp
 systemctl enable ntpd
 ntpdate -q 0.rhel.pool.ntp.org
 systemctl restart ntpd
 ```
-Debian / Ubuntu
+- Debian / Ubuntu
 ```
 apt-get install -y ntp
 systemctl enable ntp
