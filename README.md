@@ -45,6 +45,8 @@ vi /etc/soga/soga.conf
 Sau đây là các thông số cấu hình chi tiết, có thể được sửa đổi theo tài liệu tham khảo sau
 
 Vui lòng làm theo hướng dẫn tương ứng để cấu hình: https://github.com/sprov065/soga/wiki
+
+Điền đầy đủ những dòng dưới đây:
 ```
 type = v2board # Cái này là bắt buộc
 server_type = v2ray # Cái này là bắt buộc
