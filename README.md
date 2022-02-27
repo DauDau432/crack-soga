@@ -54,8 +54,8 @@ node_id = 8                         # Điền vào bảng để thêm số ID t�
 soga_key =                          # Khóa ủy quyền, không cần điền vào phiên bản cộng đồng, hỗ trợ tối đa 88 người dùng, phiên bản thương mại không giới hạn
 webapi_url = https: //www.xxxx.com/ # Đây là địa chỉ bảng điều khiển để điền vào đế cắm
 webapi_mukey = xxxxxx               # Đây là chìa khóa để giao tiếp giữa bảng điều khiển V2board và máy chủ
+cert_mode = http                    # ứng dụng chế độ (nếu tls không được sử dụng, dòng này có thể được xóa)
 cert_domain = x5.test.com           # IP VPS
-cert_mode = http                    # ứng dụng chế độ    (nếu tls không được sử dụng, dòng này có thể được xóa)
 default_dns = 8.8.8.8,1.1.1.1       # Định cấu hình dns mặc định, nơi bạn có thể định cấu hình dns để mở khóa phương tiện truyền trực tuyến, được phân tách bằng dấu phẩy
 ```
 # Hướng dẫn bẻ khóa
