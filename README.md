@@ -21,7 +21,7 @@ Phiên bản này là phiên bản crack bẩn, các bạn tự học cách sử
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/DauDau432/crack-soga/main/install.sh)
 ```
-## Thời gian đồng bộ
+## Đồng bộ thời gian 
 
 Nút v2ray cần được đồng bộ hóa thời gian. Nếu thời gian quá khác với thời gian của máy khách, kết nối sẽ không thể thực hiện được.
 
